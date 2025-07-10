@@ -7,7 +7,7 @@ const prevBtn = document.querySelector('.slider-prev');
 // sélectionne le bouton "suivant"
 const nextBtn = document.querySelector('.slider-next');
 
-// sélectionne tous les boutons "Générique" dans chaque slide
+// sélectionne tous les boutons "Play" dans chaque slide
 const buttons = document.querySelectorAll('.btn');
 
 // index actuel de la slide affichée
@@ -29,31 +29,30 @@ function showSlide(i) {
   });
 }
 
-// écouteur sur le bouton "suivant"
+// écouteur d'événement sur le bouton "next"
 nextBtn.addEventListener('click', () => {
-  index++; // on avance d'une slide
+  index++; // incrémentation
   if (index >= slides.length) {
     index = 0; // si on dépasse la dernière, on revient à la première
   }
-  showSlide(index); // on met à jour l'affichage
+  showSlide(index);
 });
 
 // écouteur sur le bouton "précédent"
 prevBtn.addEventListener('click', () => {
-  index--; // on recule d'une slide
+  index--; // 
   if (index < 0) {
     index = slides.length - 1; // si on dépasse la première, on revient à la dernière
   }
   showSlide(index); // on met à jour l'affichage
 });
 
-/**
- * écouteurs sur les boutons "Générique"
- * pour jouer ou arrêter la musique associée à la slide
+/* écouteurs d'événement sur les boutons "Play"
+  pour jouer ou arrêter la musique associée à la slide
  */
 buttons.forEach(button => {
   button.addEventListener('click', (e) => {
-    e.preventDefault(); // empêche le lien de naviguer
+    e.preventDefault(); // empêche 
 
     // on récupère la slide parente du bouton cliqué
     const slide = button.closest('.slider-slide');

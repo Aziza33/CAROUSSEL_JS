@@ -111,6 +111,30 @@ background-color: #060913;
 } */
 
 /* cacher les slides non-actives */
+
+.btn {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    background-color: #1c5980;
+    transform: scale(0.98);
+}
+/* fin boutons caroussel 2 */
 .hidden {
   display: none;
 }
